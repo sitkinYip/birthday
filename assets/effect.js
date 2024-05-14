@@ -29,8 +29,7 @@ $('document').ready(function(){
 		});
 	});
 	$('#play').click(function(){
-		var audio = $('.song')[0];
-        audio.play();
+		window.parent.postMessage('playMusic', '*');
         $('#bulb_yellow').addClass('bulb-glow-yellow-after');
 		$('#bulb_red').addClass('bulb-glow-red-after');
 		$('#bulb_blue').addClass('bulb-glow-blue-after');
