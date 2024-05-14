@@ -5,20 +5,24 @@ on:
     branches:
       - dev
       - master
+
 jobs:
   build-and-deploy:
     name: Build and deploy to server
     runs-on: ubuntu-latest
     steps:
-    - name: List files
-    run: ls -lah
-    
-    - name: Deploy
-      uses: easingthemes/ssh-deploy@v2.1.1
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
-        ARGS: '-avz --delete'
-        SOURCE: './'
-        REMOTE_HOST: ${{ secrets.HOST }}
-        REMOTE_USER: ${{ secrets.USERNAME }}
-        TARGET: ${{ secrets.SERVER_PATH }}
+      - name: Checkout repository # 这个步骤是必要的，以便获得仓库的文件
+        uses: actions/checkout@v2
+
+      - name: List files # 列出文件的步骤和之前的步骤应该是同一层的，注意缩进对齐
+        run: ls -lah
+
+      - name: Deploy
+        uses: easingthemes/ssh-deploy@v2.1.1
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+          ARGS: '-avz --delete'
+          SOURCE: './'
+          REMOTE_HOST: ${{ secrets.HOST }}
+          REMOTE_USER: ${{ secrets.USERNAME }}
+          TARGET: ${{ secrets.SERVER_PATH }}
