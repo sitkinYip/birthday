@@ -1,5 +1,5 @@
 # Dev 分支推送部署到Linux服务器
-name: Deploy to Server from Dev branch Home
+name: Deploy
 on:
   push:
     branches:
@@ -15,7 +15,7 @@ jobs:
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
         ARGS: '-avz --delete'
-        SOURCE: './*'
+        SOURCE: './'
         REMOTE_HOST: ${{ secrets.HOST }}
         REMOTE_USER: ${{ secrets.USERNAME }}
         TARGET: ${{ secrets.SERVER_PATH }}
