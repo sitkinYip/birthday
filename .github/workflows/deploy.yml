@@ -10,6 +10,8 @@ jobs:
     name: Build and deploy to server
     runs-on: ubuntu-latest
     steps:
+    - name: List files
+    run: ls -lah
     - name: Deploy
       uses: easingthemes/ssh-deploy@v2.1.1
       env:
