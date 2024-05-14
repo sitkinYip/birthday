@@ -4,16 +4,19 @@ var config = {
     // 每句话尽量不要超过15个字,不然展示效果可能不太好
     texts: [
         "Hi 郭涵姐",      //这里,每句话结尾的最后一个逗号必须是英文的哦!! 很重要哦!!
-        "这是我们认识的地4个年头",  // 同上...
+        "这是我们认识的第四个年头",  // 同上...
         "也是你与我们一起过的第三个生日",
-        "这是我们在一起的",
-        "第三个生日了哦",
-        "去年的生日",
-        "还记得在王婆串串吃的呢",
-        "今年要吃好的喽哦",
-        "要把我家可爱猪猪喂饱饱",
-        "然后抱走",
-        "YAMI~~",
+        "愿岁月轻盈, 时光温柔",
+        "星辰璀璨, 恰似你的岁月",
+        "我始终都觉得",
+        "最好的关系",
+        "有幸遇见",
+        "恰好合拍",
+        "于是我渐渐相信",
+        "青春不散场",
+        "友情永相伴",
+        "愿时光不老",
+        "愿我们不散",
     ],
     /**
      * imgs 可以不填, 但是如果要填写的话必须遵循下面的格式
@@ -25,13 +28,17 @@ var config = {
      * Tip: 图片最好用正方形or接近正方形, 看起来效果更好
      */
     imgs: {
-        "心爱的小可爱": "./imgs/xiaokeai.png",
+        "有幸遇见": "https://sitkin-cdn.oss-cn-heyuan.aliyuncs.com/pice/ssg3.jpg",
+        "恰好合拍": "https://sitkin-cdn.oss-cn-heyuan.aliyuncs.com/pice/sxg1.jpg",
+        "青春不散场": "https://sitkin-cdn.oss-cn-heyuan.aliyuncs.com/pice/ssg1.jpg",
+        "友情永相伴": "https://sitkin-cdn.oss-cn-heyuan.aliyuncs.com/pice/mhsg5.jpg",
+        "愿我们不散": "https://sitkin-cdn.oss-cn-heyuan.aliyuncs.com/pice/sxsg1.jpg"
         // "今天是你的生日": "./imgs/birthday.jpg",
     },
     // 按钮文字描述, 以下是默认的按钮文字，英文的，您可以改成你喜欢的文字
     desc: {
         turn_on: "为什么乌漆嘛黑？",
-        play: "嘿嘿，先来点音乐",
+        play: "咋们先来点音乐?",
         bannar_coming: "为啥空荡荡的？",
         balloons_flying: "是不是少点东西？",
         cake_fadein: "蛋糕？",

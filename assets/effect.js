@@ -179,6 +179,8 @@ $('document').ready(function(){
 			if(i==50){
 				$("p:nth-child(49)").fadeOut('slow').promise().done(function () {
 					$('.cake').fadeIn('fast');
+					// console.log('helo');
+					window.parent.postMessage('cakeEnd', '*');
 				});
 				
 			}
