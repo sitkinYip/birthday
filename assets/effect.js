@@ -29,7 +29,16 @@ $('document').ready(function(){
 		});
 	});
 	$('#play').click(function(){
-		window.parent.postMessage('playMusic', '*');
+		if (window.self !== window.parent) {
+			// 页面被嵌入到iframe中
+			console.log("这个页面是被嵌入到一个iframe中的。");
+			window.parent.postMessage('playMusic', '*');
+		  } else {
+			// 页面不在iframe中
+			console.log("这个页面不是被嵌入到iframe中的。");
+			var audio = $('.song')[0];
+        	audio.play();
+		  }
         $('#bulb_yellow').addClass('bulb-glow-yellow-after');
 		$('#bulb_red').addClass('bulb-glow-red-after');
 		$('#bulb_blue').addClass('bulb-glow-blue-after');
